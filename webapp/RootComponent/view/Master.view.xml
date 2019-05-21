@@ -5,11 +5,11 @@
 	xmlns:mvc="sap.ui.core.mvc">
 	<Page
 		id="page"
-		title="{i18n>title}">
+		title="Root Component List">
 		<content>
 			<List>
-				<StandardListItem title="Sub1Component" />
-				<StandardListItem title="Sub2Component" />
+				<StandardListItem type="Active" title="Sub1Component" press="onPressNavSub1" />
+				<StandardListItem type="Active" title="Sub2Component" press="onPressNavSub2" />
 			</List>
 		</content>
 	</Page>

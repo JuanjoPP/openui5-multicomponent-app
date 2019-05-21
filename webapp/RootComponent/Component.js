@@ -1,6 +1,11 @@
 sap.ui.define(
-  ["sap/ui/core/UIComponent", "sap/ui/Device", "./model/models"],
-  function(UIComponent, Device, models) {
+  [
+    "sap/ui/core/UIComponent",
+    "sap/ui/Device",
+    "sap/ui/core/BusyIndicator",
+    "./model/models"
+  ],
+  function(UIComponent, Device, BusyIndicator, models) {
     "use strict";
 
     return UIComponent.extend(
@@ -24,6 +29,9 @@ sap.ui.define(
 
           // create the views based on the url/hash
           this.getRouter().initialize();
+
+          // hide BusyIndicator
+          BusyIndicator.hide();
         }
       }
     );

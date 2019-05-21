@@ -1,7 +1,7 @@
 {
   "_version": "1.12.0",
   "sap.app": {
-    "id": "ui.demo.basicTemplate",
+    "id": "ui.demo.multiComponent.app.Sub1Component",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -32,7 +32,7 @@
 
   "sap.ui5": {
     "rootView": {
-      "viewName": "ui.demo.basicTemplate.view.App",
+      "viewName": "ui.demo.multiComponent.app.Sub1Component.view.App",
       "type": "XML",
       "async": true,
       "id": "app"
@@ -53,7 +53,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "ui.demo.basicTemplate.i18n.i18n"
+          "bundleName": "ui.demo.multiComponent.app.Sub1Component.i18n.i18n"
         }
       }
     },
@@ -68,24 +68,33 @@
       "config": {
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
-        "viewPath": "ui.demo.basicTemplate.view",
+        "viewPath": "ui.demo.multiComponent.app.Sub1Component.view",
         "controlId": "app",
         "controlAggregation": "pages",
         "async": true
       },
       "routes": [
         {
-          "pattern": "",
-          "name": "home",
-          "target": ["home"]
+          "pattern": "component1/view1",
+          "name": "sub1view1",
+          "target": "targetSub1View1"
+        },
+        {
+          "pattern": "component1/view2",
+          "name": "sub1view2",
+          "target": "targetSub1View2"
         }
       ],
       "targets": {
-        "home": {
-          "viewName": "Home",
-          "viewId": "home",
+        "targetSub1View1": {
+          "viewName": "Sub1View1",
           "viewLevel": 1,
-          "title": "{i18n>title}"
+          "viewId": "idSub1View1"
+        },
+        "targetSub1View2": {
+          "viewName": "Sub1View2",
+          "viewLevel": 2,
+          "viewId": "idSub1View2"
         }
       }
     }

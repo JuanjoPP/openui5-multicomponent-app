@@ -74,32 +74,32 @@
       },
       "routes": [
         {
-          "pattern": "component1/:all*:",
+          "pattern": "component1/:viewPattern:",
           "name": "sub1ComponentView",
-          "target": ["masterView", "target1ComponentView"]
+          "target": ["masterView", "component1View"]
         },
         {
-          "pattern": "component2/:all*:",
+          "pattern": "component2/:viewPattern:",
           "name": "sub2ComponentView",
-          "target": ["masterView", "target2ComponentView"]
+          "target": ["masterView", "component2View"]
         }
       ],
       "targets": {
-        "home": {
-          "viewName": "MasterView",
-          "viewId": "masterView",
+        "masterView": {
+          "viewName": "Master",
+          "viewId": "master",
           "title": "Navigation List",
-          "controlAggregation": "master"
+          "controlAggregation": "masterPages"
         },
-        "targetComponent1View": {
+        "component1View": {
           "viewName": "Component1View",
           "viewId": "component1View",
-          "controlAggregation": "detail"
+          "controlAggregation": "detailPages"
         },
-        "targetComponent2View": {
+        "component2View": {
           "viewName": "Component2View",
           "viewId": "component2View",
-          "controlAggregation": "detail"
+          "controlAggregation": "detailPages"
         }
       }
     }
