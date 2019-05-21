@@ -1,0 +1,7 @@
+<mvc:View busyIndicatorDelay="0"
+	 xmlns:mvc="sap.ui.core.mvc"
+	 xmlns:core="sap.ui.core"
+	 xmlns="sap.m"
+	 controllerName="ui.demo.multiComponent.app.RootComponent.controller.Component2View">
+		<core:ComponentContainer id="sub2CmpCtr" height="100%" />
+</mvc:View>

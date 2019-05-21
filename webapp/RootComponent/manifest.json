@@ -1,0 +1,107 @@
+{
+  "_version": "1.12.0",
+  "sap.app": {
+    "id": "ui.demo.multiComponent.app.RootComponent",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "ach": "ach"
+  },
+
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "ui.demo.multiComponent.app.RootComponent.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "app"
+    },
+    "dependencies": {
+      "minUI5Version": "1.60.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {},
+        "sap.ui.layout": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "ui.demo.multiComponent.app.RootComponent.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "ui.demo.multiComponent.app.RootComponent.view",
+        "controlId": "app",
+        "async": true
+      },
+      "routes": [
+        {
+          "pattern": "component1/:all*:",
+          "name": "sub1ComponentView",
+          "target": ["masterView", "target1ComponentView"]
+        },
+        {
+          "pattern": "component2/:all*:",
+          "name": "sub2ComponentView",
+          "target": ["masterView", "target2ComponentView"]
+        }
+      ],
+      "targets": {
+        "home": {
+          "viewName": "MasterView",
+          "viewId": "masterView",
+          "title": "Navigation List",
+          "controlAggregation": "master"
+        },
+        "targetComponent1View": {
+          "viewName": "Component1View",
+          "viewId": "component1View",
+          "controlAggregation": "detail"
+        },
+        "targetComponent2View": {
+          "viewName": "Component2View",
+          "viewId": "component2View",
+          "controlAggregation": "detail"
+        }
+      }
+    }
+  }
+}
