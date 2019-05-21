@@ -1,7 +1,7 @@
 {
   "name": "openui5-multicomponent-app",
   "version": "0.1.0",
-  "description": "An example of an embedded routing multicomponent app",
+  "description": "An example of an embedded routing multicomponent app using OpenUI5",
   "private": true,
   "scripts": {
     "start": "ui5 serve",
