@@ -1,11 +1,11 @@
 <mvc:View
-	controllerName="ui.demo.multiComponent.app.Sub2Component.controller.Home"
+	controllerName="ui.demo.multiComponent.app.Sub2Component.controller.Sub2View1"
 	displayBlock="true"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
 	<Page
 		id="page"
-		title="{i18n>title}">
+		title="Sub Component 2 - View 1">
 		<content></content>
 	</Page>
 </mvc:View>

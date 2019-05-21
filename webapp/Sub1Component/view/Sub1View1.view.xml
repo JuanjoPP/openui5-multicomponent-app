@@ -7,9 +7,12 @@
 		id="page"
 		height="100%"
 		width="100%"
-		title="Component 1">
+		title="Sub Component 1 - View 1">
 		<content>
-			<Button text="Navigate to view 2" press="onPressNav2Button" />
+			<VBox>
+			<Button text="Navigate to view 2 in this component" press="onPressNav2Button" class="sapUiSmallMargin"/>
+			<Button text="Navigate to view 1 in Sub2Component" press="onPressNavSub2Button" class="sapUiSmallMargin"/>
+			</VBox>
 		</content>
 	</Page>
 </mvc:View>

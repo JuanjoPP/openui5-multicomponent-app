@@ -75,17 +75,16 @@
       },
       "routes": [
         {
-          "pattern": "",
-          "name": "home",
-          "target": ["home"]
+          "pattern": "component2/view1",
+          "name": "sub2view1",
+          "target": "targetSub2View1"
         }
       ],
       "targets": {
-        "home": {
-          "viewName": "Home",
-          "viewId": "home",
+        "targetSub2View1": {
+          "viewName": "Sub2View1",
           "viewLevel": 1,
-          "title": "{i18n>title}"
+          "viewId": "idSub2View1"
         }
       }
     }

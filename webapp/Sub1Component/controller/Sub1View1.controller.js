@@ -15,6 +15,13 @@ sap.ui.define(["sap/ui/core/mvc/Controller", "../model/formatter"], function(
         this.getOwnerComponent()
           .getRouter()
           .navTo("sub1view2");
+      },
+
+      onPressNavSub2Button: function() {
+        sap.ui
+          .getCore()
+          .getEventBus()
+          .publish("nav", "sub2component:view1");
       }
     }
   );

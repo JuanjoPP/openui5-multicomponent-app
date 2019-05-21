@@ -30,8 +30,26 @@ sap.ui.define(
           // create the views based on the url/hash
           this.getRouter().initialize();
 
+          this.openInterComponentRoutes();
+
           // hide BusyIndicator
           BusyIndicator.hide();
+        },
+
+        openInterComponentRoutes: function() {
+          sap.ui
+            .getCore()
+            .getEventBus()
+            .subscribe(
+              "nav",
+              "sub2component:view1",
+              function() {
+                this.getRouter().navTo("sub2ComponentView", {
+                  viewPattern: "view1"
+                });
+              },
+              this
+            );
         }
       }
     );

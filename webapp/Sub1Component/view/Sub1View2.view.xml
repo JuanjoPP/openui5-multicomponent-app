@@ -1,5 +1,5 @@
 <mvc:View
-	controllerName="ui.demo.multiComponent.app.Sub1Component.controller.Sub1View1"
+	controllerName="ui.demo.multiComponent.app.Sub1Component.controller.Sub1View2"
 	displayBlock="true"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
@@ -7,7 +7,7 @@
 		id="page"
 		height="100%"
 		width="100%"
-		title="Component 1">
+		title="Sub Component 1 - View 2">
 		<content>
 			<Button text="Navigate to view 1" press="onPressNav1Button" />
 		</content>
